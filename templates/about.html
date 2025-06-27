@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}About - Employee Performance Prediction{% endblock %}
+
+{% block nav_about %}text-white bg-secondary{% endblock %}
+
+{% block header %}About Our System{% endblock %}
+
+{% block content %}
+<div class="bg-white shadow overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 sm:p-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">How Does It Work?</h2>
+        <div class="prose max-w-none">
+            <p class="text-gray-600 mb-4">
+                Our system uses advanced Machine Learning models like <span class="font-semibold">Random Forest, XGBoost, and Linear Regression</span> to analyze employee performance data and make accurate predictions.
+            </p>
+            <p class="text-gray-600 mb-4">
+                The system takes into account various factors such as:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-600">
+                <li>Team composition and dynamics</li>
+                <li>Departmental factors</li>
+                <li>Targeted productivity metrics</li>
+                <li>Standard minute values (SMV)</li>
+                <li>Work in progress statistics</li>
+                <li>Overtime patterns</li>
+                <li>Incentive structures</li>
+                <li>Worker idle time and allocation</li>
+            </ul>
+            
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-4">Model Accuracy</h3>
+            <p class="text-gray-600 mb-6">
+                Our prediction model has been trained on historical performance data and achieves high accuracy in predicting employee performance categories. 
+                The system is continuously improved as more data becomes available.
+            </p>
+            
+            <div class="mt-8 flex justify-center">
+                <a href="{{ url_for('predict') }}" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Try the Prediction Tool
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
